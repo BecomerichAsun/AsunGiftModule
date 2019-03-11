@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		941F646422364F1E0038FDE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F646322364F1E0038FDE5 /* AppDelegate.swift */; };
+		941F646622364F1E0038FDE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F646522364F1E0038FDE5 /* ViewController.swift */; };
+		941F646922364F1E0038FDE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941F646722364F1E0038FDE5 /* Main.storyboard */; };
+		941F646B22364F1F0038FDE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 941F646A22364F1F0038FDE5 /* Assets.xcassets */; };
+		941F646E22364F1F0038FDE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941F646C22364F1F0038FDE5 /* LaunchScreen.storyboard */; };
+		941F647622364F510038FDE5 /* AsunGiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F647522364F510038FDE5 /* AsunGiftCell.swift */; };
+		941F6478223654930038FDE5 /* AsunKeyBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F6477223654930038FDE5 /* AsunKeyBoardView.swift */; };
+		941F647A223655370038FDE5 /* AsunFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F6479223655370038FDE5 /* AsunFlowLayout.swift */; };
+		941F647C2236615D0038FDE5 /* AsunTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F647B2236615D0038FDE5 /* AsunTool.swift */; };
+		941F647F223664870038FDE5 /* AsunGiftOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F647D223664870038FDE5 /* AsunGiftOperation.swift */; };
+		941F6480223664870038FDE5 /* AsunGiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F647E223664870038FDE5 /* AsunGiftView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		941F646022364F1E0038FDE5 /* AsunGiftModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsunGiftModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		941F646322364F1E0038FDE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		941F646522364F1E0038FDE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		941F646822364F1E0038FDE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		941F646A22364F1F0038FDE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		941F646D22364F1F0038FDE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		941F646F22364F1F0038FDE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		941F647522364F510038FDE5 /* AsunGiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsunGiftCell.swift; sourceTree = "<group>"; };
+		941F6477223654930038FDE5 /* AsunKeyBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsunKeyBoardView.swift; sourceTree = "<group>"; };
+		941F6479223655370038FDE5 /* AsunFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsunFlowLayout.swift; sourceTree = "<group>"; };
+		941F647B2236615D0038FDE5 /* AsunTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsunTool.swift; sourceTree = "<group>"; };
+		941F647D223664870038FDE5 /* AsunGiftOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsunGiftOperation.swift; sourceTree = "<group>"; };
+		941F647E223664870038FDE5 /* AsunGiftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsunGiftView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		941F645D22364F1E0038FDE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		941F645722364F1D0038FDE5 = {
+			isa = PBXGroup;
+			children = (
+				941F646222364F1E0038FDE5 /* AsunGiftModule */,
+				941F646122364F1E0038FDE5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		941F646122364F1E0038FDE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				941F646022364F1E0038FDE5 /* AsunGiftModule.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		941F646222364F1E0038FDE5 /* AsunGiftModule */ = {
+			isa = PBXGroup;
+			children = (
+				941F646322364F1E0038FDE5 /* AppDelegate.swift */,
+				941F646522364F1E0038FDE5 /* ViewController.swift */,
+				941F648122366B430038FDE5 /* Animation */,
+				941F646722364F1E0038FDE5 /* Main.storyboard */,
+				941F646A22364F1F0038FDE5 /* Assets.xcassets */,
+				941F646C22364F1F0038FDE5 /* LaunchScreen.storyboard */,
+				941F646F22364F1F0038FDE5 /* Info.plist */,
+			);
+			path = AsunGiftModule;
+			sourceTree = "<group>";
+		};
+		941F648122366B430038FDE5 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				941F6477223654930038FDE5 /* AsunKeyBoardView.swift */,
+				941F647E223664870038FDE5 /* AsunGiftView.swift */,
+				941F647D223664870038FDE5 /* AsunGiftOperation.swift */,
+				941F6479223655370038FDE5 /* AsunFlowLayout.swift */,
+				941F647522364F510038FDE5 /* AsunGiftCell.swift */,
+				941F647B2236615D0038FDE5 /* AsunTool.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		941F645F22364F1E0038FDE5 /* AsunGiftModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 941F647222364F1F0038FDE5 /* Build configuration list for PBXNativeTarget "AsunGiftModule" */;
+			buildPhases = (
+				941F645C22364F1E0038FDE5 /* Sources */,
+				941F645D22364F1E0038FDE5 /* Frameworks */,
+				941F645E22364F1E0038FDE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AsunGiftModule;
+			productName = AsunGiftModule;
+			productReference = 941F646022364F1E0038FDE5 /* AsunGiftModule.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		941F645822364F1D0038FDE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Asun;
+				TargetAttributes = {
+					941F645F22364F1E0038FDE5 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 941F645B22364F1D0038FDE5 /* Build configuration list for PBXProject "AsunGiftModule" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 941F645722364F1D0038FDE5;
+			productRefGroup = 941F646122364F1E0038FDE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				941F645F22364F1E0038FDE5 /* AsunGiftModule */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		941F645E22364F1E0038FDE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				941F646E22364F1F0038FDE5 /* LaunchScreen.storyboard in Resources */,
+				941F646B22364F1F0038FDE5 /* Assets.xcassets in Resources */,
+				941F646922364F1E0038FDE5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		941F645C22364F1E0038FDE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				941F6480223664870038FDE5 /* AsunGiftView.swift in Sources */,
+				941F647C2236615D0038FDE5 /* AsunTool.swift in Sources */,
+				941F6478223654930038FDE5 /* AsunKeyBoardView.swift in Sources */,
+				941F646622364F1E0038FDE5 /* ViewController.swift in Sources */,
+				941F647622364F510038FDE5 /* AsunGiftCell.swift in Sources */,
+				941F647A223655370038FDE5 /* AsunFlowLayout.swift in Sources */,
+				941F647F223664870038FDE5 /* AsunGiftOperation.swift in Sources */,
+				941F646422364F1E0038FDE5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		941F646722364F1E0038FDE5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				941F646822364F1E0038FDE5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		941F646C22364F1F0038FDE5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				941F646D22364F1F0038FDE5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		941F647022364F1F0038FDE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		941F647122364F1F0038FDE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		941F647322364F1F0038FDE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = AsunGiftModule/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BecomeRich.AsunGiftModule;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		941F647422364F1F0038FDE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = AsunGiftModule/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BecomeRich.AsunGiftModule;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		941F645B22364F1D0038FDE5 /* Build configuration list for PBXProject "AsunGiftModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				941F647022364F1F0038FDE5 /* Debug */,
+				941F647122364F1F0038FDE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		941F647222364F1F0038FDE5 /* Build configuration list for PBXNativeTarget "AsunGiftModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				941F647322364F1F0038FDE5 /* Debug */,
+				941F647422364F1F0038FDE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 941F645822364F1D0038FDE5 /* Project object */;
+}
