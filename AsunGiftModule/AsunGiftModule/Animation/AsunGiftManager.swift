@@ -27,11 +27,19 @@ class AsunGiftManager: NSObject {
 
     lazy var topAnimationView:AsunGiftView = {
         let view = AsunGiftView(frame: CGRect(x: -220, y: ScreenHeight - 420, width: 240, height: 80))
+        view.giftKeyCallBack = { [weak self] model in
+            guard let `self` = self else { return }
+            self.giftKeys.append(model.giftKey as String)
+        }
         return view
     }()
 
     lazy var bottomAnimationView:AsunGiftView = {
         let view = AsunGiftView(frame: CGRect(x: -220, y: ScreenHeight - 500, width: 240, height: 80))
+        view.giftKeyCallBack = { [weak self] model in
+            guard let `self` = self else { return }
+            self.giftKeys.append(model.giftKey as String)
+        }
         return view
     }()
 
@@ -42,20 +50,6 @@ class AsunGiftManager: NSObject {
     var finishedCallBack:completeBlock? = nil
 
     static let sharedManager = AsunGiftManager()
-
-    override init() {
-        super.init()
-        
-        topAnimationView.giftKeyCallBack = { [weak self] model in
-            guard let `self` = self else { return }
-            self.giftKeys.append(model.giftKey as String)
-        }
-
-        bottomAnimationView.giftKeyCallBack = { [weak self] model in
-            guard let `self` = self else { return }
-            self.giftKeys.append(model.giftKey as String)
-        }
-    }
 
     func showGiftView(atView:UIView,info:AsunGiftModel,completeBlock:completeBlock) {
         let key = info.giftKey as String
@@ -70,6 +64,7 @@ class AsunGiftManager: NSObject {
                 if op.giftView?.currentGiftCount ?? 0 >= giftMaxCount {
                     self.operationCache.removeObject(forKey: nsKey)
                     for item in 0 ..< self.giftKeys.count {
+                        guard item < self.giftKeys.count else {return}
                         if giftKeys[item].elementsEqual(key) {
                             self.giftKeys.remove(at: item)
                         }
@@ -95,8 +90,10 @@ class AsunGiftManager: NSObject {
                         callBack(finished)
                     }
                     self.operationCache.removeObject(forKey: nsKey)
+                   guard self.giftKeys.count > 0 else { return }
                     for item in 0 ..< self.giftKeys.count {
-                        if self.giftKeys[item].elementsEqual(key) {
+                        guard item < self.giftKeys.count else {return}
+                        if self.giftKeys[item] == key {
                             self.giftKeys.remove(at: item)
                         }
                     }
@@ -110,7 +107,9 @@ class AsunGiftManager: NSObject {
                 let op:AsunGiftOperation = self.operationCache.object(forKey: nsKey) as! AsunGiftOperation
                 if op.giftView?.currentGiftCount ?? 0 >= giftMaxCount {
                     self.operationCache.removeObject(forKey: nsKey)
+                    guard self.giftKeys.count > 0 else { return }
                     for item in 0 ..< self.giftKeys.count {
+                        guard item < self.giftKeys.count else {return}
                         if giftKeys[item].elementsEqual(key) {
                             self.giftKeys.remove(at: item)
                         }
@@ -140,7 +139,9 @@ class AsunGiftManager: NSObject {
                     }
 
                     self.operationCache.removeObject(forKey: nsKey)
+                    guard self.giftKeys.count > 0 else { return }
                     for item in 0 ..< self.giftKeys.count {
+                        guard self.giftKeys.count <= item else {return}
                         if self.giftKeys[item] == key {
                             self.giftKeys.remove(at: item)
                         }

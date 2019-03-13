@@ -67,7 +67,7 @@ class AsunKeyBoardView: UIView {
 
     func creatDataSourceImages() {
         giftModels = [AsunGiftModel]()
-        for item in 1..<22 {
+        for item in 0..<10 {
             let model = AsunGiftModel()
             model.defaultCount = 0
             model.giftId = "\(item)"
