@@ -55,6 +55,8 @@ class AsunKeyBoardView: UIView {
         return view
     }()
 
+    var indexpath:IndexPath?
+
     var deviceIndicator:CGFloat = isPhoneX() ? 34 : 0
 
     var colHeigh:CGFloat = 145
@@ -143,13 +145,19 @@ extension AsunKeyBoardView: UICollectionViewDataSource,UICollectionViewDelegate 
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let del = self.delegate {
-            del.showDetails(model: (self.giftModels?[indexPath.row] ?? AsunGiftModel()))
-        }
+        self.indexpath = indexPath
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(didSelected), object: nil)
+        self.perform(#selector(didSelected), with: nil, afterDelay: 0.2)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let x = scrollView.contentOffset.x
         pageControl.currentPage = Int(x/ScreenWidth + 0.5)
+    }
+
+    @objc private func didSelected() {
+        if let del = self.delegate {
+            del.showDetails(model: (self.giftModels?[self.indexpath!.row] ?? AsunGiftModel()))
+        }
     }
 }

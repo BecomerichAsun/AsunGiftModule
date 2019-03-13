@@ -30,7 +30,7 @@ class AsunGiftView: UIView {
 
     lazy var currentGiftCount:Int = 0
 
-    lazy var animationTime:Int = 3
+    lazy var animationTime:Int = 2
 
     lazy var giftModel:AsunGiftModel = AsunGiftModel()
 
