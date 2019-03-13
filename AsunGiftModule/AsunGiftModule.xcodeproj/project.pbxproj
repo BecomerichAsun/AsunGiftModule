@@ -18,6 +18,9 @@
 		941F647C2236615D0038FDE5 /* AsunTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F647B2236615D0038FDE5 /* AsunTool.swift */; };
 		941F647F223664870038FDE5 /* AsunGiftOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F647D223664870038FDE5 /* AsunGiftOperation.swift */; };
 		941F6480223664870038FDE5 /* AsunGiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F647E223664870038FDE5 /* AsunGiftView.swift */; };
+		9440470D2238E17200B2B989 /* AsunGiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9440470C2238E17200B2B989 /* AsunGiftModel.swift */; };
+		9449972A2238E61000D9F2C9 /* AsunGiftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944997292238E61000D9F2C9 /* AsunGiftLabel.swift */; };
+		9449972C2238EF8300D9F2C9 /* AsunGiftManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9449972B2238EF8300D9F2C9 /* AsunGiftManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		941F647B2236615D0038FDE5 /* AsunTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsunTool.swift; sourceTree = "<group>"; };
 		941F647D223664870038FDE5 /* AsunGiftOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsunGiftOperation.swift; sourceTree = "<group>"; };
 		941F647E223664870038FDE5 /* AsunGiftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsunGiftView.swift; sourceTree = "<group>"; };
+		9440470C2238E17200B2B989 /* AsunGiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsunGiftModel.swift; sourceTree = "<group>"; };
+		944997292238E61000D9F2C9 /* AsunGiftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsunGiftLabel.swift; sourceTree = "<group>"; };
+		9449972B2238EF8300D9F2C9 /* AsunGiftManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsunGiftManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		941F646222364F1E0038FDE5 /* AsunGiftModule */ = {
 			isa = PBXGroup;
 			children = (
+				9440470B2238E16300B2B989 /* Data */,
 				941F646322364F1E0038FDE5 /* AppDelegate.swift */,
 				941F646522364F1E0038FDE5 /* ViewController.swift */,
 				941F648122366B430038FDE5 /* Animation */,
@@ -80,14 +87,24 @@
 		941F648122366B430038FDE5 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				9449972B2238EF8300D9F2C9 /* AsunGiftManager.swift */,
 				941F6477223654930038FDE5 /* AsunKeyBoardView.swift */,
 				941F647E223664870038FDE5 /* AsunGiftView.swift */,
 				941F647D223664870038FDE5 /* AsunGiftOperation.swift */,
 				941F6479223655370038FDE5 /* AsunFlowLayout.swift */,
 				941F647522364F510038FDE5 /* AsunGiftCell.swift */,
+				944997292238E61000D9F2C9 /* AsunGiftLabel.swift */,
 				941F647B2236615D0038FDE5 /* AsunTool.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		9440470B2238E16300B2B989 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9440470C2238E17200B2B989 /* AsunGiftModel.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,8 +182,11 @@
 				941F647C2236615D0038FDE5 /* AsunTool.swift in Sources */,
 				941F6478223654930038FDE5 /* AsunKeyBoardView.swift in Sources */,
 				941F646622364F1E0038FDE5 /* ViewController.swift in Sources */,
+				9440470D2238E17200B2B989 /* AsunGiftModel.swift in Sources */,
+				9449972A2238E61000D9F2C9 /* AsunGiftLabel.swift in Sources */,
 				941F647622364F510038FDE5 /* AsunGiftCell.swift in Sources */,
 				941F647A223655370038FDE5 /* AsunFlowLayout.swift in Sources */,
+				9449972C2238EF8300D9F2C9 /* AsunGiftManager.swift in Sources */,
 				941F647F223664870038FDE5 /* AsunGiftOperation.swift in Sources */,
 				941F646422364F1E0038FDE5 /* AppDelegate.swift in Sources */,
 			);

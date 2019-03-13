@@ -8,15 +8,15 @@
 
 import UIKit
 
-public protocol AsunKeyBoardDelegate:class {
-    func showDetails(imageName:String)
+protocol AsunKeyBoardDelegate:class {
+    func showDetails(model:AsunGiftModel)
 }
 
 class AsunKeyBoardView: UIView {
 
     weak var delegate:AsunKeyBoardDelegate?
 
-    var images:[String] = [String]()
+    var giftModels:[AsunGiftModel]?
 
     var expressionBackView:UIView = {
         let view = UIView()
@@ -62,11 +62,20 @@ class AsunKeyBoardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         creatDataSourceImages()
+        self.frame = CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: ScreenHeight)
     }
 
     func creatDataSourceImages() {
+        giftModels = [AsunGiftModel]()
         for item in 1..<22 {
-            images.append(String(item))
+            let model = AsunGiftModel()
+            model.defaultCount = 0
+            model.giftId = "\(item)"
+            model.giftKey = "\(item)" as NSString
+            model.sendCount = 1
+            model.giftName = "\(item)"
+            model.defaultCount = 0
+            self.giftModels?.append(model)
         }
         self.addSubview(expressionBackView)
 
@@ -77,7 +86,7 @@ class AsunKeyBoardView: UIView {
 
         pageControl.frame = CGRect(x: ScreenWidth/2 - 50/2, y: (expressionBackView.bounds.size.height - 20) - 5/2, width: 50, height: 5)
 
-        pageControl.numberOfPages = (images.count / 8) + 1
+        pageControl.numberOfPages = ((giftModels?.count ?? 0) / 8) + 1
 
         AsunGiftCollectionView.reloadData()
     }
@@ -124,18 +133,18 @@ extension AsunKeyBoardView {
 //MARK: Delegate/Datasource
 extension AsunKeyBoardView: UICollectionViewDataSource,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return giftModels?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GiftCell", for: indexPath) as! AsunGiftCell
-        cell.giftImage.image = UIImage(named: images[indexPath.row])
+        cell.giftImage.image = UIImage(named: giftModels?[indexPath.row].giftName ?? "")
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let del = self.delegate {
-            del.showDetails(imageName: "\(indexPath.row + 1)")
+            del.showDetails(model: (self.giftModels?[indexPath.row] ?? AsunGiftModel()))
         }
     }
 

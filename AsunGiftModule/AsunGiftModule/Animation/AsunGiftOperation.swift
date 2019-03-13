@@ -10,9 +10,13 @@ import UIKit
 
 class AsunGiftOperation: Operation {
 
-    var imageStr:String?
+    var dataSource:AsunGiftModel?
 
     var giftView:AsunGiftView?
+
+    var atView:UIView?
+
+    var operationEndCallBack:((Bool,String) -> ())? = nil
 
     override var isExecuting: Bool {
         return _isExecuting
@@ -37,35 +41,31 @@ class AsunGiftOperation: Operation {
         _isFinished = false
     }
 
-    convenience init(gift:AsunGiftView,imageStr:String) {
-        self.init()
-        self.giftView = gift
-        self.imageStr = imageStr
 
-
-        NotificationCenter.default.addObserver(self, selector: #selector(becomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
-
-    }
-
-    @objc func becomeActive() {
-        self._isFinished = true
+    class func addOperationShowGift(giftView:AsunGiftView,atView:UIView,data:AsunGiftModel,completeCallBack:@escaping animationFinished) -> AsunGiftOperation{
+        let op = AsunGiftOperation()
+        op.giftView = giftView
+        op.dataSource = data
+        op.atView = atView
+        op.operationEndCallBack = completeCallBack
+        return op
     }
 
     override func start() {
-        do {
-            if isCancelled {
-                _isFinished = true
-                return
-            }
-            _isExecuting = true
-            DispatchQueue.main.async {
-                self.giftView?.showOperationView(name: self.imageStr ?? "", isfinished: { [weak self](value) in
-                    guard let `self` = self else { return }
-                    self._isFinished = value
-                })
-            }
-        } catch {
-            print(error)
+        if isCancelled {
+            _isFinished = true
+            return
+        }
+        _isExecuting = true
+        OperationQueue.main.addOperation {
+            self.atView?.addSubview(self.giftView ?? AsunGiftView())
+            self.giftView?.showOperationView(giftModel: self.dataSource ?? AsunGiftModel(), isfinished: { [weak self](value,key) in
+                guard let `self` = self else { return }
+                self._isFinished = value
+                if let callBack = self.operationEndCallBack {
+                    callBack(value,key)
+                }
+            })
         }
     }
 }
